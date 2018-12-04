@@ -19,6 +19,11 @@ public class Inputs {
         this.webDriver = webDriver;
     }
 
+    public Inputs setinput(String value) {
+        webDriver.findElement(By.xpath(String.format("//*[contains(@label,'%s')]", name))).sendKeys(value);
+        return this;
+    }
+
 
     public Inputs click() {
         logger.info("Клик поля " + name);
@@ -26,6 +31,8 @@ public class Inputs {
         webElement.click();
         return this;
     }
+
+
 
 
 }

@@ -21,10 +21,11 @@ public class job2 extends BaseRunner {
         Page_Jobtinkoff.open();
 
 
-
-
-
-
+        Page_Jobtinkoff.setinput("Фамилия, имя и отчество" , "Буслаев Филипп Алексеевич");
+        Page_Jobtinkoff.setinput("Электронная почта" , "asef@asdf.ru");
+        Page_Jobtinkoff.setinput("Номер телефона" , "9834567890");
+        Page_Jobtinkoff.setinput("Город" , "Москва");
+        Page_Jobtinkoff.click_on_select_from_list("Выберите вакансию","Специалист отдела электронной корреспонденции");
 
         Assert.assertEquals("", Page_Jobtinkoff.geterror("Фамилия, имя и отчество"));
         Assert.assertEquals("", Page_Jobtinkoff.geterror("Электронная почта"));
