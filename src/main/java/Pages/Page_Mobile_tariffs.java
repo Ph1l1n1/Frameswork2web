@@ -1,5 +1,6 @@
 package Pages;
 
+import Simple_action.Checkbox;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,7 @@ public class Page_Mobile_tariffs {
     private static final String URL = "https://www.tinkoff.ru/mobile-operator/tariffs/";
     private static final By approve_region = By.xpath("//*[@class='MvnoRegionConfirmation__option_3mrvz MvnoRegionConfirmation__optionAgreement_3M5qT']");
     private static final By get_region = By.xpath("//*[@class='MvnoRegionConfirmation__title_3WFCP']");
-    private static final By CheckboxMusic = By.xpath("//div[@data-qa-file=\"UICheckbox\" and contains(string(),'Музыка')]//div[@data-qa-file=\"UICheckbox\"]");
+
 
 
     public Page_Mobile_tariffs(WebDriver webDriver) {
@@ -47,8 +48,10 @@ public class Page_Mobile_tariffs {
     }
 
 
-    public By checkboxMusic(){
-        return CheckboxMusic;
-    }
+    public void setTrueActiveCheckbox(String музыка) {
+        Checkbox checkbox = new Checkbox("Музыка", webDriver);
+        checkbox.setActive();
 
+
+    }
 }

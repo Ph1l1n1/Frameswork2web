@@ -22,12 +22,11 @@ public class Tinkoff_tariffs extends BaseRunner {
         Page_Mobile_tariffs.refresh();
         Assert.assertThat(Page_Mobile_tariffs.getregion(), CoreMatchers.containsString(region));
 
-        Checkbox checkbox = new Checkbox("Музыка");
-        checkbox.setActive(true);
+        Page_Mobile_tariffs.setTrueActiveCheckbox( "Музыка");
+
 
 
         System.out.println("test success");
-
     }
 
 

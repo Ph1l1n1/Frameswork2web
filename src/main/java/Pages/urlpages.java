@@ -3,6 +3,12 @@ package Pages;
 public enum urlpages {
     url("Page_Mobile_tariffs");
 
+
+
+
+
+
+
     private String wlc;
 
     urlpages(String wlc) {
