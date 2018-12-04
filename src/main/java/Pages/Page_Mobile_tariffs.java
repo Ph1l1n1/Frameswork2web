@@ -12,7 +12,7 @@ public class Page_Mobile_tariffs {
     private static final String URL = "https://www.tinkoff.ru/mobile-operator/tariffs/";
     private static final By approve_region = By.xpath("//*[@class='MvnoRegionConfirmation__option_3mrvz MvnoRegionConfirmation__optionAgreement_3M5qT']");
     private static final By get_region = By.xpath("//*[@class='MvnoRegionConfirmation__title_3WFCP']");
-
+    private static final By CheckboxMusic = By.xpath("//div[@data-qa-file=\"UICheckbox\" and contains(string(),'Музыка')]//div[@data-qa-file=\"UICheckbox\"]");
 
 
     public Page_Mobile_tariffs(WebDriver webDriver) {
@@ -44,6 +44,11 @@ public class Page_Mobile_tariffs {
         logger.info("Открытие страницы: " + URL);
         webDriver.navigate().refresh();
         return this;
+    }
+
+
+    public By checkboxMusic(){
+        return CheckboxMusic;
     }
 
 }
